@@ -43,6 +43,6 @@ jobs:
           context: .
           file: ./php-${{ matrix.type }}.dockerfile
           build-args: |
-            BASE_IMAGE="php:${{ matrix.version }}-${{ matrix.type }}"
+            BASE_IMAGE=php:${{ matrix.version }}-${{ matrix.type }}
           push: true
           tags: ${{ secrets.DH_USERNAME }}/php:${{ matrix.type }}-${{ steps.tag-rename.outputs.tag }}-latest
