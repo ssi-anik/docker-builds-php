@@ -35,14 +35,17 @@ jobs:
 
       - name: Rename version
         id: tag-rename
-        run: echo "::set-output name=tag::${v/./}"
+        run: echo "::set-output name=tag::$(echo ${{ matrix.version }} | tr '.' '')"
 
-      - name: Build and publish
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          file: ./php-${{ matrix.type }}.dockerfile
-          build-args: |
-            BASE_IMAGE=php:${{ matrix.version }}-${{ matrix.type }}
-          push: true
-          tags: ${{ secrets.DH_USERNAME }}/php:${{ matrix.type }}-${{ steps.tag-rename.outputs.tag }}-latest
+      - name: test
+        run: echo ${{ steps.tag-rename.outputs.tag }}
+
+#      - name: Build and publish
+#        uses: docker/build-push-action@v5
+#        with:
+#          context: .
+#          file: ./php-${{ matrix.type }}.dockerfile
+#          build-args: |
+#            BASE_IMAGE=php:${{ matrix.version }}-${{ matrix.type }}
+#          push: true
+#          tags: ${{ secrets.DH_USERNAME }}/php:${{ matrix.type }}-${{ steps.tag-rename.outputs.tag }}-latest
