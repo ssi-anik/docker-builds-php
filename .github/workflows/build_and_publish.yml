@@ -35,7 +35,7 @@ jobs:
 
       - name: Rename version
         id: tag-rename
-        run: echo "::set-output name=tag::$(echo ${{ matrix.version }} | tr '.' '')"
+        run: echo "::set-output name=tag::$(echo '${{ matrix.version }}' | tr '.' '')"
 
       - name: test
         run: echo ${{ steps.tag-rename.outputs.tag }}
