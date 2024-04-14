@@ -7,6 +7,6 @@ INCLUDE+ ./includes/supervisor.dockerfile
 
 COPY ./php-zts-entrypoint.sh /php-zts-entrypoint
 
-RUN chmod +x /php-ztd-entrypoint
+RUN chmod +x /php-zts-entrypoint
 
 ENTRYPOINT ["/php-zts-entrypoint"]
