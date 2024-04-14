@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         version: [ '8.3' ]
-        type: [ 'fpm', 'cli', 'zts' ]
+        type: [ 'fpm' ]
 
     steps:
       - name: Checkout
@@ -35,7 +35,7 @@ jobs:
 
       - name: Rename version
         id: tag-rename
-        run: echo "::set-output name=tag::$(echo ${{ matrix.version }} | tr -d '.')"
+        run: echo "tag=$(echo ${{ matrix.version }} | tr -d '.')">> $GITHUB_OUTPUT
 
       - name: test
         run: echo ${{ steps.tag-rename.outputs.tag }}
