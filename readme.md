@@ -4,16 +4,11 @@
 
 ## Images
 
-| Base Image    | Tag                            | Exposed Ports |
-|---------------|--------------------------------|---------------|
-| `php:8.2-fpm` | `sirajul/php:fpm-82-latest`    | `80`, `9000`  |
-| `php:8.1-fpm` | `sirajul/php:fpm-81-latest`    | `80`, `9000`  |
-| `php:8.0-fpm` | `sirajul/php:fpm-80-latest`    | `80`, `9000`  |
-| `php:7.4-fpm` | `sirajul/php:fpm-74-latest`    | `80`, `9000`  |
-| `php:8.2-cli` | `sirajul/php:worker-82-latest` | **N/A**       |
-| `php:8.1-cli` | `sirajul/php:worker-81-latest` | **N/A**       |
-| `php:8.0-cli` | `sirajul/php:worker-80-latest` | **N/A**       |
-| `php:7.4-cli` | `sirajul/php:worker-74-latest` | **N/A**       |
+| Base Image    | Tag                         | Exposed Ports |
+|---------------|-----------------------------|---------------|
+| `php:8.3-fpm` | `sirajul/php:fpm-83-latest` | `80`, `9000`  |
+| `php:8.3-cli` | `sirajul/php:cli-83-latest` | **N/A**       |
+| `php:8.3-zts` | `sirajul/php:zts-83-latest` | **N/A**       |
 
 **NOTE**: Image `fpm-*` has `nginx` installed as web server listening on port `80` with project root set to `/var/www/html/public`.
 
@@ -23,6 +18,7 @@
 - `curl`
 - `nano`
 - `vim`
+- `less`
 - `unzip`
 - `zip`
 - `git`
@@ -37,42 +33,19 @@
 ## Available Modules
 
 - `bcmath`
-- `curl`
-- `date`
-- `dom`
-- `fileinfo`
-- `filter`
-- `ftp`
 - `gd`
 - `gmp`
-- `hash`
-- `iconv`
-- `imagick`
-- `json`
-- `libxml`
+- `intl`
 - `mbstring`
-- `mysqlnd`
-- `openssl`
-- `pcre`
+- `mcrypt`
+- `pcntl`
 - `PDO`
 - `pdo_mysql`
 - `pdo_pgsql`
 - `pdo_sqlite`
-- `Phar`
 - `posix`
-- `readline`
 - `redis`
-- `Reflection`
-- `session`
-- `SimpleXML`
-- `sodium`
-- `SPL`
 - `sockets`
-- `sqlite3`
-- `standard`
-- `tokenizer`
-- `xml`
-- `xmlreader`
-- `xmlwriter`
-- `Zend OPcache`
+- `sodium`
+- `zip`
 - `zlib`
