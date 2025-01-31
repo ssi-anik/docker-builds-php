@@ -6,9 +6,9 @@
 
 | Base Image    | Tag                         | Exposed Ports |
 |---------------|-----------------------------|---------------|
-| `php:8.3-fpm` | `sirajul/php:fpm-83-latest` | `80`, `9000`  |
-| `php:8.3-cli` | `sirajul/php:cli-83-latest` | **N/A**       |
-| `php:8.3-zts` | `sirajul/php:zts-83-latest` | **N/A**       |
+| `php:8.4-fpm` | `sirajul/php:fpm-84-latest` | `80`, `9000`  |
+| `php:8.4-cli` | `sirajul/php:cli-84-latest` | **N/A**       |
+| `php:8.4-zts` | `sirajul/php:zts-84-latest` | **N/A**       |
 
 **NOTE**: Image `fpm-*` has `nginx` installed as web server listening on port `80` with project root set to `/var/www/html/public`.
 
