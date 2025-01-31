@@ -8,7 +8,7 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 
 # ext imagick not available for 8.3 https://github.com/mlocati/docker-php-extension-installer?tab=readme-ov-file#supported-php-extensions
 RUN chmod +x /usr/local/bin/install-php-extensions \
-    && install-php-extensions pdo pdo_pgsql pdo_mysql mcrypt bcmath redis sockets pcntl \
+    && install-php-extensions pdo pdo_pgsql pdo_mysql bcmath redis sockets pcntl \
         intl zip gmp gd @composer
 
 # Copy default ini config

@@ -37,7 +37,6 @@
 - `gmp`
 - `intl`
 - `mbstring`
-- `mcrypt`
 - `pcntl`
 - `PDO`
 - `pdo_mysql`
